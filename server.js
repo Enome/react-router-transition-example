@@ -15,8 +15,3 @@ app.get('/*', function (req, res) {
 });
 
 http.createServer(app).listen(3000);
-
-/*
-  { from: 'overlay', to: 'static', className: 'overlay-static' } 
-  { from: 'static', to: 'overlay', className: 'static-overlay' } 
-*/
