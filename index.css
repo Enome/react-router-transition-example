@@ -1,0 +1,63 @@
+body {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.page1 {
+  background: #A3FFBD;
+}
+
+.page2 {
+  background: #F84A97;
+}
+
+
+/* ANIMATIONS */
+
+@-webkit-keyframes none {
+  0% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes overlay {
+  from { -webkit-transform: translate(0, 100%); }
+  to { -webkit-transform: translate(0, 0); }
+}
+
+/* none -> overlay */
+
+/* old */
+.none-overlay-leave {
+  -webkit-animation: none 300ms;
+}
+
+/* new */
+.none-overlay-enter {
+  -webkit-animation: overlay 300ms;
+  z-index: 1;
+}
+
+
+/* overlay -> none */
+
+/* old */
+.overlay-none-leave {
+  -webkit-animation: overlay 300ms reverse;
+}
+
+/* new */
+.overlay-none-enter {
+  -webkit-animation: none 300ms;
+}
